@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import re
 
-sns.set()
+sns.set_theme()
 
 
 # "Global" definitions
