@@ -23,7 +23,7 @@ class KNN:
         distances = [euclidean_distance(x, x_train) for x_train in self.X_train]
 
         # Prendi gli indici dei k vicini più prossimi
-        k_indices = np.argsort(distances)[:self.k]
+        k_indices = np.argsort(distances)[: self.k]
 
         # Estrai le etichette corrispondenti ai k vicini
         k_nearest_labels = [self.y_train[i] for i in k_indices]
@@ -33,17 +33,9 @@ class KNN:
         return most_common[0][0]
 
 
-if __name__ == "__main__"
+if __name__ == "__main__":
     # Esempio di utilizzo con un dataset semplice
-    dataset = np.array([
-        [1, 2],
-        [2, 3],
-        [3, 1],
-        [6, 5],
-        [7, 7],
-        [8, 6]
-    ])
-
+    dataset = np.array([[1, 2], [2, 3], [3, 1], [6, 5], [7, 7], [8, 6]])
     labels = np.array([0, 0, 0, 1, 1, 1])
 
     # Dividiamo in dati di addestramento e test

@@ -1,3 +1,5 @@
+venv
+test.*
 01_*/test.*
 02_*/test.*
 03_*/test.*
